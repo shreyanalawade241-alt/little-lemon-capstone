@@ -1,0 +1,25 @@
+{% extends "restaurant/base.html" %}
+
+{% block title %}Little Lemon - Menu{% endblock %}
+
+{% block content %}
+<h2>Our Menu</h2>
+{% if menu %}
+<table>
+  <thead>
+    <tr><th>Dish</th><th>Price</th><th>In stock</th></tr>
+  </thead>
+  <tbody>
+    {% for item in menu %}
+    <tr>
+      <td>{{ item.title }}</td>
+      <td>${{ item.price }}</td>
+      <td>{{ item.inventory }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>The menu is empty. Add dishes via <code>POST /api/menu/</code> or the admin site.</p>
+{% endif %}
+{% endblock %}

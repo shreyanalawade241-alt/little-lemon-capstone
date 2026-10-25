@@ -1,0 +1,17 @@
+{% extends "restaurant/base.html" %}
+
+{% block title %}Little Lemon - Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h2>Welcome to Little Lemon</h2>
+  <p>A family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+</section>
+
+<h3>Book a table</h3>
+<p>
+  Table bookings are handled through our REST API. Register at
+  <code>/auth/users/</code>, log in at <code>/auth/token/login/</code>
+  and then use <code>/api/booking/tables/</code>.
+</p>
+{% endblock %}
